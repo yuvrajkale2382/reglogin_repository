@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Registration Form</title>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   <link rel='stylesheet' href="{% static 'bootstrap/css/font-awesome-5.8.1.css' %}">
+    <link rel='stylesheet' href="{% static 'bootstrap/css/bootstrap.css' %}">
+     <link rel='stylesheet' href="{% static 'bootstrap/css/mdb.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <div class="modal-success shadow">
+                <div class="modal-header bg-warning">
+                    <h1>Registration Form</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                          {{ rform }}<br>
+                        <div class="offset-md-2 col-md-8">
+                             <input type="submit" value="Register" class="btn btn-success">
+                              <input type="reset" value="Clear" class="btn btn-danger">
+                           <small> <a href="/#/">  Already Registered??Login</a></small>
+                        </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
